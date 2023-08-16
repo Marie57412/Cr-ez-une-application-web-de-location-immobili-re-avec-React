@@ -1,14 +1,15 @@
 import {Routes, Route} from "react-router-dom"
-import Banner from "./accueil/Banner";
-import Contenair from "./accueil/Contenair-card";
+import Accueil from "./accueil/Accueil"
+import Contenair from "./accueil/Contenair";
+
 
 function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Banner/>}/>
-        <Route path="/" element={<Contenair/>}/>
+        <Route path="/" element={<Accueil/>}/>       
       </Routes>
+      <Contenair></Contenair>
     </div>
   )
 }

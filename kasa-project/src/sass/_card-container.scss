@@ -1,0 +1,18 @@
+.contenair-card{
+    background-color: $greyBack;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-top: 43px;
+    
+
+    .card {
+        background-color: $primRed;
+        height: 200px;
+        width: 100px;
+        border-radius: 10px;
+        
+    }
+}
