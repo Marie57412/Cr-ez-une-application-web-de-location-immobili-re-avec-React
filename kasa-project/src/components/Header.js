@@ -10,8 +10,8 @@ function Header() {
           <img src={Logoheader} className="logoKasa" alt="logo de kasa"></img>
         </h1>
         <div className="navFlex">
-          <Link className="navLink">Accueil</Link>
-          <Link className="navLink">À propos</Link>
+          <Link to="/" className="navLink">Accueil</Link>
+          <Link to="/propos" className="navLink">À propos</Link>
         </div>
       </div>
     </header>

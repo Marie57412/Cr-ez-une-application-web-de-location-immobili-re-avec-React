@@ -13,12 +13,10 @@ function Contenair() {
           </div>
 
           <img src={item.cover} alt={item.title} />
-          <div className="pictures">
-            {item.pictures.map((picture, index) => (
-              <img key={index} src={picture} alt={`Picture ${index + 1}`} />
-            ))}
+         
+          
           </div>
-        </div>
+        
       ))}
     </section>
   );

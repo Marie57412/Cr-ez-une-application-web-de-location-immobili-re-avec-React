@@ -4,7 +4,6 @@ import "../src/sass/main.css";
 import Header from './components/Header';
 import App from './components/App';
 import Footer from './components/Footer';
-
 import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

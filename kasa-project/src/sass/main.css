@@ -119,8 +119,10 @@ a {
   background-position: center;
 }
 
-.pictures {
-  display: none;
+.Flexcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
