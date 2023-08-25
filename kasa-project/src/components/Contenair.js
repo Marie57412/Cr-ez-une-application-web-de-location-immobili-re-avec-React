@@ -1,11 +1,11 @@
 import React from "react";
-import Logement from "../../data/logements.json";
+import Logement from "../data/logements.json";
 
 function Contenair() {
   return (
     <section className="contenair-card">
       {Logement.map((item) => (
-        <div className="card" key={item.id}> {/* Clé déplacée ici */}
+        <div className="card" key={item.id}> {}
           <div className="filter-card" />
           <div className="title-card">
             <h2>{item.title}</h2>

@@ -1,11 +1,12 @@
 import React from "react";
+import Banner from "../Banner";
 
 
 
-function About (){
+function About (props){
     return (
         <div>
-           
+           <Banner />
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import {Routes, Route} from "react-router-dom"
-import Accueil from "./accueil/Accueil"
-import Contenair from "./accueil/Contenair";
+import Banner from "./Banner"
 import About from "./A_propos/About";
+import Accueil from "../Pages/Accueil";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Accueil/>}/> 
         <Route path="/propos" element={<About/>}/>      
       </Routes>
-  
+      
     </div>
   )
 }

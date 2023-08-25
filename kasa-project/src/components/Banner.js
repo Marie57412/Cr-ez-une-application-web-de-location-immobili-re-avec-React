@@ -1,8 +1,8 @@
 import React from "react";
-import Bannierehome from "../../assets/HomeBanner.jpg";
+import Bannierehome from "../assets/HomeBanner.jpg";
 import Contenair from "./Contenair";
 
-function Accueil() {
+function Banner() {
   return (
     <main>
     <div className="banner-home">
@@ -16,12 +16,12 @@ function Accueil() {
     </div>
     <div className="Flexcontent">
 
-      <Contenair></Contenair>
+      
       </div>
-        
+      
     
     </main>
     
   );
 }
-export default Accueil;
+export default Banner;
