@@ -49,7 +49,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 .banner-home .banner-img {
   width: 80%;
