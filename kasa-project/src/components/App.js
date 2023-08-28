@@ -1,6 +1,5 @@
 import {Routes, Route} from "react-router-dom"
-import Banner from "./Banner"
-import About from "./A_propos/About";
+import About from "../Pages/About";
 import Accueil from "../Pages/Accueil";
 
 

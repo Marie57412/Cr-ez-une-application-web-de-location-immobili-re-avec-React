@@ -1,27 +1,26 @@
 import React from "react";
-import Bannierehome from "../assets/HomeBanner.jpg";
-import Contenair from "./Contenair";
+import Bannerhome from "../assets/HomeBanner.jpg";
 
-function Banner() {
+function Banner(props) {
+
+  const HomeBanner = props.src || Bannerhome
+  
   return (
     <main>
-    <div className="banner-home">
-    
-      <img
-        src={Bannierehome}
-        className="banner-img"
-        alt="banniere-acceuil"
-      ></img>
-      <p className="banner-title">Chez vous, partout et ailleurs</p>
-    </div>
-    <div className="Flexcontent">
-
-      
+      <div className="banner-home">
+        <img
+          src={HomeBanner}  // Utilisez la prop src pour l'URL de l'image
+          className="banner-img"
+          alt="banniere-acceuil"
+        ></img>
+        {props.title !== "" && <p className="banner-title">{props.title}Chez vous, partout et ailleurs</p>}
+       
       </div>
-      
-    
+      <div className="Flexcontent">
+       
+      </div>
     </main>
-    
   );
 }
+
 export default Banner;
