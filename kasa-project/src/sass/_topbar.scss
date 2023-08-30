@@ -10,17 +10,41 @@
     justify-content: space-between;
     background-color: $primRed;
     border-radius: 5px;
-    height: 34px;
-
+    height: 52px;
     margin-bottom: 30px;
+    align-items: center;
 
     .text-style {
       color: $whiteColor;
       font-size: 24px;
       margin: 3px;
+      margin-left: 13px;
       font-family: $fontBase;
     }
 
-   
+    .arrow-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 20px;
+      transition: transform 0.5s ease;
+      cursor: pointer;
+
+     
+    }
   }
+  .arrow-icon.open {
+    transform: rotate(180deg);
+    
+    
+  }
+}
+
+.content-about {
+  background: var(--gray, #f6f6f6);
+  color: $primRed;
+  margin-top: -32px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 20px;
+
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "../src/sass/main.css";
 import Header from './components/Header';
-import App from './components/App';
+import App from './App';
 import Footer from './components/Footer';
 import { BrowserRouter } from "react-router-dom";
 

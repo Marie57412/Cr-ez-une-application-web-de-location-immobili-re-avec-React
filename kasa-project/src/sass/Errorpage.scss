@@ -1,0 +1,31 @@
+.error-page{
+
+    color:  $primRed;
+    font-family: $fontBase;
+
+    .title-error {
+        
+    text-align: center;
+    
+    font-size: 288px;
+    font-style: normal;
+    font-weight: 700;
+    }
+    
+    .text-error {
+        
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    
+    }
+    
+    .text-back {
+        font-size: 36px;
+        font-weight: 500;
+    }
+}
+
+
+
+

@@ -133,14 +133,55 @@ a {
   justify-content: space-between;
   background-color: #FF6060;
   border-radius: 5px;
-  height: 34px;
+  height: 52px;
   margin-bottom: 30px;
+  align-items: center;
 }
 .topbar-container .topbar-style .text-style {
   color: #FFFFFF;
   font-size: 24px;
   margin: 3px;
+  margin-left: 13px;
   font-family: "Montserrat", sans-serif;
+}
+.topbar-container .topbar-style .arrow-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.topbar-container .arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.content-about {
+  background: var(--gray, #f6f6f6);
+  color: #FF6060;
+  margin-top: -32px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.error-page {
+  color: #FF6060;
+  font-family: "Montserrat", sans-serif;
+}
+.error-page .title-error {
+  text-align: center;
+  font-size: 288px;
+  font-style: normal;
+  font-weight: 700;
+}
+.error-page .text-error {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+}
+.error-page .text-back {
+  font-size: 36px;
+  font-weight: 500;
 }
 
 .footer {

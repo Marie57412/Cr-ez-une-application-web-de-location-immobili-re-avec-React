@@ -1,6 +1,6 @@
 import {Routes, Route} from "react-router-dom"
-import About from "../Pages/About";
-import Accueil from "../Pages/Accueil";
+import About from "./Pages/About";
+import Accueil from "./Pages/Accueil";
 
 
 function App() {
