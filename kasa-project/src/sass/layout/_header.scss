@@ -22,6 +22,10 @@
         color: $primRed;
         font-family: $fontBase;
       }
+
+      .active {
+        border-bottom: 1px solid $primRed;
+      }
     }
   }
 }

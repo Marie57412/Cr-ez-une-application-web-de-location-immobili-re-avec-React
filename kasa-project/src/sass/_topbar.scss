@@ -1,0 +1,26 @@
+.topbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  .topbar-style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $primRed;
+    border-radius: 5px;
+    height: 34px;
+
+    margin-bottom: 30px;
+
+    .text-style {
+      color: $whiteColor;
+      font-size: 24px;
+      margin: 3px;
+      font-family: $fontBase;
+    }
+
+   
+  }
+}
