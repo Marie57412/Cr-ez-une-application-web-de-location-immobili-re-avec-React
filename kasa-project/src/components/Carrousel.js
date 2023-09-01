@@ -23,7 +23,7 @@ function CarrouselSlide() {
     );
   };
 
-  // Obtenez l'URL de l'image actuelle
+ 
   const currentImage = logementsData[currentSlide].pictures[currentSlide];
 
   return (

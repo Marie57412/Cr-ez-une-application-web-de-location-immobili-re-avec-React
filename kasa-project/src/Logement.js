@@ -1,5 +1,4 @@
 import React from "react";
-import logementData from "../src/data/logements.json";
 import CarrouselSlide from "./components/Carrousel";
 import TopbarItem from "./components/TopbarItem";
 
@@ -15,7 +14,7 @@ function Logement() {
         <TopbarItem text="Equipements" />
       </div>
       <div className="host">
-        
+
       </div>
     </div>
   );

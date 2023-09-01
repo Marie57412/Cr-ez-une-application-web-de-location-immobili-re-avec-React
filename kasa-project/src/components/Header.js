@@ -3,12 +3,11 @@ import Logoheader from "../assets/logo.jpg";
 import { Link, useLocation } from "react-router-dom";
 
 function Header() {
-  const location = useLocation(); // Récupère l'objet de l'emplacement courant
+  const location = useLocation(); 
 
-  // Utilisez le hook useState pour suivre l'état de la page active
-  const [activePage, setActivePage] = useState("/"); // Par défaut, on suppose que c'est la page d'accueil
-
-  // Met à jour la page active chaque fois que l'emplacement change
+ 
+  const [activePage, setActivePage] = useState("/"); 
+ 
   React.useEffect(() => {
     setActivePage(location.pathname);
   }, [location]);

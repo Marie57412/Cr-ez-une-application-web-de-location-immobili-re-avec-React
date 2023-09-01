@@ -9,7 +9,7 @@ function Banner(props) {
     <main>
       <div className="banner-home">
         <img
-          src={HomeBanner}  // Utilisez la prop src pour l'URL de l'image
+          src={HomeBanner}  
           className="banner-img"
           alt="banniere-acceuil"
         ></img>
