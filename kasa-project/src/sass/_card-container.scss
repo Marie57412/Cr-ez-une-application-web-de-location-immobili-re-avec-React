@@ -9,6 +9,17 @@
   margin: 0 auto;
   gap: 50px;
   padding: 50px;
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+    width: 93%;
+ 
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width: 736px){
+    display: flex;
+     flex-direction: column;
+     margin: 0;
+     width: 100%;
+  }
  
 }
 
@@ -20,6 +31,10 @@
     overflow: hidden;
     margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+      height: 270px;
+      width: 29%;
+    }
     
     .filter-card {
         position: absolute;

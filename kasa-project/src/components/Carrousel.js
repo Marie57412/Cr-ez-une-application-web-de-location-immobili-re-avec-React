@@ -23,14 +23,24 @@ function CarrouselSlide() {
     );
   };
 
- 
   const currentImage = logementsData[currentSlide].pictures[currentSlide];
 
   return (
     <div className="carrousel-container">
-      <button onClick={prevSlide}><img src={arrowLeft}></img></button>
-      <img src={currentImage} alt={logementsData[currentSlide].title} />
-      <button onClick={nextSlide}><img src={arrowRight}></img></button>
+       <img
+        className="img-carrousel"
+        src={currentImage}
+        alt={logementsData[currentSlide].title}
+      />
+      <div className="btn-carrousel">
+      <button className="leftButton" onClick={prevSlide}>
+        <img src={arrowLeft} alt="Précédent" />
+      </button>
+     
+      <button className="rightButton" onClick={nextSlide}>
+        <img src={arrowRight} alt="Suivant" />
+      </button>
+      </div>
     </div>
   );
 }

@@ -3,6 +3,12 @@ body {
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  body {
+    margin: 0;
+    display: flex;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -22,6 +28,11 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .header .navbar {
+    display: flex;
+  }
 }
 .header .navbar .logokasa {
   height: 68px;
@@ -75,6 +86,19 @@ a {
   gap: 50px;
   padding: 50px;
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .contenair-card {
+    width: 93%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .contenair-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+}
 
 .card {
   position: relative;
@@ -84,6 +108,12 @@ a {
   overflow: hidden;
   margin: 0 auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .card {
+    height: 270px;
+    width: 29%;
+  }
 }
 .card .filter-card {
   position: absolute;
@@ -126,6 +156,7 @@ a {
   justify-content: center;
   width: 60%;
   margin: auto;
+  gap: 30px;
 }
 .topbar-container .topbar-style {
   display: flex;
@@ -134,7 +165,6 @@ a {
   background-color: #FF6060;
   border-radius: 5px;
   height: 52px;
-  margin-bottom: 30px;
   align-items: center;
 }
 .topbar-container .topbar-style .text-style {
@@ -155,13 +185,33 @@ a {
   transform: rotate(180deg);
 }
 
-.content-about {
+.container-collapse {
   background: var(--gray, #f6f6f6);
   color: #FF6060;
-  margin-top: -32px;
-  margin-bottom: 30px;
+  margin-top: 0;
   border-radius: 5px;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.container-collapse.active {
+  max-height: 1000px;
   padding: 20px;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+
+ul {
+  margin-top: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
 }
 
 .error-page {
@@ -194,6 +244,47 @@ a {
   text-decoration-line: underline;
 }
 
+.carrousel-container {
+  height: 415px;
+  border-radius: 25px;
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 80%;
+}
+
+.leftButton,
+.rightButton {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 18px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.leftButton {
+  left: 0;
+}
+
+.rightButton {
+  right: 0;
+}
+
+.img-carrousel {
+  width: 100%;
+  border-radius: 25px;
+  margin: 45px 0px 0px 0px;
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 21pc;
+  filter: brightness(80%);
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -201,6 +292,7 @@ a {
   background-color: #000000;
   width: 100%;
   height: 209px;
+  margin-top: 30px;
 }
 .footer p {
   color: #FFFFFF;

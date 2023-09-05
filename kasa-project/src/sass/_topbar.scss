@@ -4,6 +4,7 @@
   justify-content: center;
   width: 60%;
   margin: auto;
+  gap: 30px;
   .topbar-style {
     display: flex;
     flex-direction: row;
@@ -11,7 +12,7 @@
     background-color: $primRed;
     border-radius: 5px;
     height: 52px;
-    margin-bottom: 30px;
+
     align-items: center;
 
     .text-style {
@@ -28,23 +29,39 @@
       margin-right: 20px;
       transition: transform 0.5s ease;
       cursor: pointer;
-
-     
     }
   }
   .arrow-icon.open {
     transform: rotate(180deg);
-    
-    
   }
 }
 
-.content-about {
+.container-collapse {
   background: var(--gray, #f6f6f6);
   color: $primRed;
-  margin-top: -32px;
-  margin-bottom: 30px;
+  margin-top: 0;
   border-radius: 5px;
-  padding: 20px;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+}
 
+.container-collapse.active {
+  max-height: 1000px;
+  padding: 20px;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+ul {
+  margin-top: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
 }

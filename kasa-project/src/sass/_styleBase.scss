@@ -4,6 +4,10 @@ body {
     min-width: 335px;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
+    @media only screen and (min-device-width : 320px) and (max-device-width: 736px){
+        margin: 0;
+        display: flex;
+    }
 }
 
 * {

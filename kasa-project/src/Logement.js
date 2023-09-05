@@ -9,9 +9,12 @@ function Logement() {
       <div>
         <CarrouselSlide />
       </div>
-      <div className="topbar-container">
+      
+      <div className="topbar-container  topbar-carrousel">
+      
         <TopbarItem text="Description" />
         <TopbarItem text="Equipements" />
+   
       </div>
       <div className="host">
 
