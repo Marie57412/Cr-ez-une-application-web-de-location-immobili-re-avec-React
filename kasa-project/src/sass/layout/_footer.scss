@@ -7,7 +7,19 @@
     height: 209px;
     margin-top: 30px;
 
+    @media only screen and (min-device-width : 320px) and (max-device-width: 736px){
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     p {
         color: $whiteColor;
+    }
+
+    .footer-content {
+        @media only screen and (min-device-width : 320px) and (max-device-width: 736px){
+            width: 45%;
+        }
     }
 }

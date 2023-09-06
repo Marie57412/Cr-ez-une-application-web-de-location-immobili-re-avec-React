@@ -5,6 +5,10 @@
   width: 60%;
   margin: auto;
   gap: 30px;
+
+  @media only screen and (min-device-width : 320px) and (max-device-width: 736px){
+    width: 80%;
+  }
   .topbar-style {
     display: flex;
     flex-direction: row;
