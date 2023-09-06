@@ -23,26 +23,29 @@ function CarrouselSlide() {
     );
   };
 
-  const currentImage = logementsData[currentSlide].pictures[currentSlide];
+  const currentLogement = logementsData[currentSlide];
+  const currentImage = currentLogement.pictures[currentSlide];
+  const currentHost = currentLogement.host[currentSlide];
 
   return (
     <div className="carrousel-container">
-       <img
+      <img
         className="img-carrousel"
         src={currentImage}
-        alt={logementsData[currentSlide].title}
+        alt={currentLogement.title}
       />
+      <h2 className="logement-title">{currentLogement.title}</h2>
       <div className="btn-carrousel">
-      <button className="leftButton" onClick={prevSlide}>
-        <img src={arrowLeft} alt="Précédent" />
-      </button>
-     
-      <button className="rightButton" onClick={nextSlide}>
-        <img src={arrowRight} alt="Suivant" />
-      </button>
+        <button className="leftButton" onClick={prevSlide}>
+          <img src={arrowLeft} alt="Précédent" />
+        </button>
+
+        <button className="rightButton" onClick={nextSlide}>
+          <img src={arrowRight} alt="Suivant" />
+        </button>
       </div>
+      
     </div>
   );
 }
-
 export default CarrouselSlide;

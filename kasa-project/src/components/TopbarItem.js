@@ -31,7 +31,8 @@ function TopbarItem({ text }) {
           alt="fleche"
           onClick={handleToggle}
         />
-      </div>
+        </div>
+      
       <div className={`container-collapse ${isOpened ? "active" : ""}`}>
         {text === "Equipements" ? (
           <ul>
@@ -43,6 +44,7 @@ function TopbarItem({ text }) {
           <div className="content-about">{textMapping[text]}</div>
         )}
       </div>
+    
     </div>
   );
 }

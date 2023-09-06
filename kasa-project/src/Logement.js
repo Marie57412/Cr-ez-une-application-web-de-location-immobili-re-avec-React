@@ -1,6 +1,7 @@
 import React from "react";
 import CarrouselSlide from "./components/Carrousel";
 import TopbarItem from "./components/TopbarItem";
+import RatingStars from "./components/Rating";
 
 // Composant de la page logements
 function Logement() {
@@ -9,16 +10,16 @@ function Logement() {
       <div>
         <CarrouselSlide />
       </div>
-      
-      <div className="topbar-container  topbar-carrousel">
-      
+      <RatingStars/>
+      <div className="topbar-container">
+        <div className="topbar-carrousel">
         <TopbarItem text="Description" />
         <TopbarItem text="Equipements" />
+        </div>
    
       </div>
-      <div className="host">
-
-      </div>
+      
+     
     </div>
   );
 }
