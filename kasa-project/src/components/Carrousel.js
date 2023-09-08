@@ -32,9 +32,10 @@ function CarrouselSlide() {
       <img
         className="img-carrousel"
         src={currentImage}
-        alt={currentLogement.title}
+        alt="imageAppartement"
       />
-      <h2 className="logement-title">{currentLogement.title}</h2>
+      
+      
       <div className="btn-carrousel">
         <button className="leftButton" onClick={prevSlide}>
           <img src={arrowLeft} alt="Précédent" />

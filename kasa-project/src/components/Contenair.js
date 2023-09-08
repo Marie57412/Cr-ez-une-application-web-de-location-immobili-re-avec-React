@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Logement from "../data/logements.json";
 import { Link } from "react-router-dom";
+import CarrouselSlide from "./Carrousel";
 
-
-//container des cards logements
 function Contenair() {
+  const [selectedLogementId, setSelectedLogementId] = useState(null);
+
+  const handleLogementSelect = (logementId) => {
+    setSelectedLogementId(logementId);
+  };
+
   return (
     <section className="contenair-card">
       {Logement.map((item) => (
-        <Link to={`/logement/${item.id}`} key={item.id} className="card"> 
-          <div className="filter-card" />
-          <div className="title-card">
-            <h2>{item.title}</h2>
-            <p>{item.location}</p>
-          </div>
-          <img src={item.cover} alt={item.title} />
-        </Link>
+        <div key={item.id} className="card">
+          <Link to={`/logement/${item.id}`} className="card-link">
+            <div className="filter-card" />
+            <div className="title-card">
+              <h2>{item.title}</h2>
+              <p>{item.location}</p>
+            </div>
+            <img src={item.cover} alt={item.title} />
+          </Link>
+          <button onClick={() => handleLogementSelect(item.id)}>
+            Voir le carrousel
+          </button>
+        </div>
       ))}
+
+      {selectedLogementId && (
+        <CarrouselSlide logementId={selectedLogementId} />
+      )}
     </section>
   );
 }
