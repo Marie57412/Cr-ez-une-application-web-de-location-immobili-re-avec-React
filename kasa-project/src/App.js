@@ -11,10 +11,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Accueil/>}/> 
         <Route path="/propos" element={<About/>}/>
-        <Route path="/logement/:id" element={<Logement />} />    
-        <Route path='*' element={<Error />} />  
+        <Route path="/logement/:logementId" element={<Logement />} />
+        <Route path='*' element={<Error />} />
       </Routes>
-      
+
     </div>
   )
 }
