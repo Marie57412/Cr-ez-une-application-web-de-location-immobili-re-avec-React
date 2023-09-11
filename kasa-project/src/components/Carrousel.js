@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; // Importez useParams pour extraire l'ID de l'URL
-import logementsData from "../data/logements.json";
+import React, { useState } from "react";
 import arrowLeft from "../assets/arrow_left.png";
 import arrowRight from "../assets/arrow_right.png";
 
 // Composant carrousel
-function CarrouselSlide() {
-  const { logementId } = useParams(); // Utilisez useParams pour extraire l'ID de l'URL
+function CarrouselSlide({ currentLogement }) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentLogement, setCurrentLogement] = useState(null);
-
-  // Utilisez useEffect pour mettre à jour le logement actuel en fonction de l'ID
-  useEffect(() => {
-    const selectedLogement = logementsData.find((logement) => logement.id === logementId);
-    if (selectedLogement) {
-      setCurrentLogement(selectedLogement);
-    }
-  }, [logementId]);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) =>
@@ -44,6 +32,9 @@ function CarrouselSlide() {
         src={currentImage}
         alt="imageAppartement"
       />
+      <p>
+        {currentSlide} / {currentLogement.pictures.length}
+      </p>
 
       <div className="btn-carrousel">
         <button className="leftButton" onClick={prevSlide}>
@@ -54,7 +45,6 @@ function CarrouselSlide() {
           <img src={arrowRight} alt="Suivant" />
         </button>
       </div>
-
     </div>
   );
 }
