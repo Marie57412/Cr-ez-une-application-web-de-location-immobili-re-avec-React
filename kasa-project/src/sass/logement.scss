@@ -12,7 +12,7 @@
     border: none;
     background: transparent;
     position: absolute; 
-    top: 46%; 
+    top: 54%; 
     transform: translateY(-50%); 
     padding: 18px;
     z-index: 1; 
@@ -39,7 +39,7 @@
   }
 
 
-  .logement-title{
+.title-logement{
     color: $primRed;
     font-size: 36px;
     font-family: Montserrat;
@@ -48,11 +48,25 @@
     
   }
 
+  .location-text {
+    font-size: 18px;
+    color: $primRed;
+
+  }
+
   .topbar-carrousel{
     display: flex;
     flex-direction: row;
     gap: 76px;
   }
 
+  .number-caroussel{
+    position: absolute;
+    bottom: 0;
+    color: $whiteColor;
+    font-size: 18px;
+    left: 607px;
+
+  }
  
   

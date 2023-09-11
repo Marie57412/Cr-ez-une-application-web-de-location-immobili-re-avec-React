@@ -32,8 +32,8 @@ function CarrouselSlide({ currentLogement }) {
         src={currentImage}
         alt="imageAppartement"
       />
-      <p>
-        {currentSlide} / {currentLogement.pictures.length}
+      <p className="number-caroussel">
+        {currentSlide + 1} / {currentLogement.pictures.length}
       </p>
 
       <div className="btn-carrousel">
