@@ -1,6 +1,5 @@
 import React from "react";
 import ArrowUp from "../assets/arrow_up.png";
-import logementData from "../data/logements.json";
 import { useState } from "react";
 
 

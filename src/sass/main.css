@@ -302,6 +302,11 @@ ul li {
   margin: auto;
   width: 80%;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .carrousel-container {
+    width: 70%;
+  }
+}
 
 .leftButton,
 .rightButton {
@@ -351,8 +356,8 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 18%;
+  gap: 76px;
 }
 .topbar-carrousel .topbar-style {
   display: flex;
@@ -373,7 +378,7 @@ ul li {
   bottom: 0;
   color: #FFFFFF;
   font-size: 18px;
-  left: 607px;
+  left: 724px;
 }
 
 .tag-logement {
@@ -395,6 +400,41 @@ ul li {
 
 .content-logement {
   margin-left: 10%;
+  margin-top: 30px;
+}
+
+.host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #FF6060;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  padding-right: 10px;
+  padding-top: 5px;
+  height: 52px;
+  width: 100px;
+  gap: 10px;
+}
+
+.host-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15%;
+  margin-top: 20px;
+}
+
+.host-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.title_host {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer {

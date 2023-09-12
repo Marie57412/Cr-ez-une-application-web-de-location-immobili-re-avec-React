@@ -13,6 +13,7 @@ function Logement() {
   const [titles, setTitles] = useState(null);
   const [locations, setLocation] = useState(null);
   const [tags, setTags] = useState([]);
+  const [hosts, setHost] = useState(null);
 
   useEffect(() => {
     const selectedLogement = logementsData.find(
@@ -23,6 +24,7 @@ function Logement() {
       setTitles(selectedLogement.title);
       setLocation(selectedLogement.location); // Met à jour l'état du logement actuel avec les données chargées
       setTags(selectedLogement.tags);
+      setHost(selectedLogement.host);
     }
   }, [logementId]);
 
@@ -34,23 +36,40 @@ function Logement() {
       </div>
       {/* Affiche le composant d'étoiles de notation */}
       <div className="content-logement">
+        <div className="title_host">
         <h1 className="title-logement">{titles}</h1>
+        <div className="host-container">
+           <div className="host">
+        {currentLogement && (
+          <>
+            <p>{currentLogement.host.name}</p>
+            <img className="host-img" src={currentLogement.host.picture} alt="Photo de l'hôte" />
+          </>
+        )}
+        </div>
+        
+      </div>
+        </div>
         <p className="location-text">{locations}</p>
+        
         <div className="tag-logement">
           {tags.map((tag, index) => (
             <p className="tag-text" key={index}>
               {tag}
             </p>
           ))}
+          
+          
         </div>
       </div>
+     
       <RatingStars />
 
-      <div className="topbar-carrousel">
+      <div className="topbar-container topbar-carrousel">
         {/* Affiche les éléments de la barre supérieure en passant les données du logement actuel en tant que props */}
         <TopbarItem text={currentLogement?.description} title="Description" />
-        <TopbarItem text={currentLogement?.equipments} title="Equipements" /> 
-        </div>   
+        <TopbarItem text={currentLogement?.equipments} title="Equipements" />
+      </div>
     </div>
   );
 }
