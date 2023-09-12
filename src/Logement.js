@@ -10,8 +10,9 @@ import RatingStars from "./components/Rating"; // Importez le composant d'étoil
 function Logement() {
   const { logementId } = useParams(); // Utilisez useParams pour extraire l'ID de l'URL
   const [currentLogement, setCurrentLogement] = useState(null);
-  const [titles, setTitles] = useState();
-  const[locations, setLocation] = useState();
+  const [titles, setTitles] = useState(null);
+  const [locations, setLocation] = useState(null);
+  const [tags, setTags] = useState([]);
 
   useEffect(() => {
     const selectedLogement = logementsData.find(
@@ -21,7 +22,7 @@ function Logement() {
       setCurrentLogement(selectedLogement);
       setTitles(selectedLogement.title);
       setLocation(selectedLogement.location); // Met à jour l'état du logement actuel avec les données chargées
-      
+      setTags(selectedLogement.tags);
     }
   }, [logementId]);
 
@@ -32,23 +33,24 @@ function Logement() {
         <CarrouselSlide currentLogement={currentLogement} />
       </div>
       {/* Affiche le composant d'étoiles de notation */}
-
-      
-      
-      
-      <h1 className="title-logement">{titles}</h1>
-      <p className="location-text">{locations}</p>
-      <RatingStars />
-
-
-
-      <div className="topbar-container">
-        <div className="topbar-carrousel">
-          {/* Affiche les éléments de la barre supérieure en passant les données du logement actuel en tant que props */}
-          <TopbarItem text={currentLogement?.description} title="Description" />
-          <TopbarItem text={currentLogement?.equipments} title="Equipements" />
+      <div className="content-logement">
+        <h1 className="title-logement">{titles}</h1>
+        <p className="location-text">{locations}</p>
+        <div className="tag-logement">
+          {tags.map((tag, index) => (
+            <p className="tag-text" key={index}>
+              {tag}
+            </p>
+          ))}
         </div>
       </div>
+      <RatingStars />
+
+      <div className="topbar-carrousel">
+        {/* Affiche les éléments de la barre supérieure en passant les données du logement actuel en tant que props */}
+        <TopbarItem text={currentLogement?.description} title="Description" />
+        <TopbarItem text={currentLogement?.equipments} title="Equipements" /> 
+        </div>   
     </div>
   );
 }

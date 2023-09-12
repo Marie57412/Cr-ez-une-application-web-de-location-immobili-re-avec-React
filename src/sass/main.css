@@ -350,7 +350,22 @@ ul li {
 .topbar-carrousel {
   display: flex;
   flex-direction: row;
-  gap: 76px;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.topbar-carrousel .topbar-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FF6060;
+  border-radius: 5px;
+  height: 52px;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  width: 687px;
+  color: #FFFFFF;
+  font-size: 18px;
 }
 
 .number-caroussel {
@@ -359,6 +374,27 @@ ul li {
   color: #FFFFFF;
   font-size: 18px;
   left: 607px;
+}
+
+.tag-logement {
+  display: flex;
+  margin-bottom: 24px;
+}
+.tag-logement .tag-text {
+  margin: 10px;
+  background-color: #FF6060;
+  height: 25px;
+  color: #FFFFFF;
+  font-size: 14px;
+  border-radius: 10px;
+  min-width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-logement {
+  margin-left: 10%;
 }
 
 .footer {
