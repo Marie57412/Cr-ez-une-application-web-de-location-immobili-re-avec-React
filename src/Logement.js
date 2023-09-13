@@ -14,6 +14,7 @@ function Logement() {
   const [locations, setLocation] = useState(null);
   const [tags, setTags] = useState([]);
   const [ host,setHost] = useState(null);
+  
 
   useEffect(() => {
     const selectedLogement = logementsData.find(

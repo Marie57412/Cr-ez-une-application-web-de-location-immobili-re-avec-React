@@ -2,6 +2,7 @@
     border-radius: 25px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative; 
     margin: auto;
     width: 80%;
@@ -77,11 +78,23 @@
     justify-content: center;
     margin-left: 18%;
     gap: 76px;
-    @media (max-width: 1024px) {
+    @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      margin-left: 10%;
+
+      
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+    }
+   
+
+    
    
 
       
@@ -94,18 +107,20 @@
     height: 52px;
     align-items: center;
     padding: 10px 20px 10px 10px;
-    width: 687px;
+    width: 582px;
     color: $whiteColor;
     font-size: 18px;
     
-    @media (max-width: 1024px) {
+    @media (max-width: 1400px) {
        width: 100%;
        padding-right: 0;
       height: 30px;
     }
+
+   
     
-    
-     }
+  }
+ 
   }
 
   .number-caroussel{
@@ -113,7 +128,6 @@
     bottom: 0;
     color: $whiteColor;
     font-size: 18px;
-    left: 724px;
 
     @media (max-width: 1024px) {
      display: none;
