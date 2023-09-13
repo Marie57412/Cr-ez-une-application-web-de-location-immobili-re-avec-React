@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"; // Importez useParams pour extrair
 import logementsData from "./data/logements.json"; // Importez les données des logements (assurez-vous que le chemin soit correct)
 import CarrouselSlide from "./components/Carrousel"; // Importez le composant de carrousel
 import TopbarItem from "./components/TopbarItem"; // Importez le composant de barre supérieure
-import RatingStars from "./components/Rating"; // Importez le composant d'étoiles de notation
+
 
 // Composant de la page logements
 function Logement() {
@@ -13,7 +13,7 @@ function Logement() {
   const [titles, setTitles] = useState(null);
   const [locations, setLocation] = useState(null);
   const [tags, setTags] = useState([]);
-  const [hosts, setHost] = useState(null);
+  const [ host,setHost] = useState(null);
 
   useEffect(() => {
     const selectedLogement = logementsData.find(
@@ -24,7 +24,7 @@ function Logement() {
       setTitles(selectedLogement.title);
       setLocation(selectedLogement.location); // Met à jour l'état du logement actuel avec les données chargées
       setTags(selectedLogement.tags);
-      setHost(selectedLogement.host);
+      setHost( selectedLogement.host);
     }
   }, [logementId]);
 
@@ -62,8 +62,7 @@ function Logement() {
           
         </div>
       </div>
-     
-      <RatingStars />
+   
 
       <div className="topbar-container topbar-carrousel">
         {/* Affiche les éléments de la barre supérieure en passant les données du logement actuel en tant que props */}

@@ -1,12 +1,10 @@
 body {
-  min-width: 335px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
   body {
     margin: 0;
-    display: flex;
   }
 }
 
@@ -26,7 +24,7 @@ a {
 @media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
   .header {
     width: 90%;
-    padding: 0px 0 27px 0;
+    padding: 0px 0 27px 2px;
   }
 }
 .header .navbar {
@@ -224,6 +222,11 @@ a {
   margin-left: 13px;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 1024px) {
+  .topbar-container .topbar-style .text-style {
+    font-size: 13px;
+  }
+}
 .topbar-container .topbar-style .arrow-icon {
   width: 32px;
   height: 32px;
@@ -302,11 +305,6 @@ ul li {
   margin: auto;
   width: 80%;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
-  .carrousel-container {
-    width: 70%;
-  }
-}
 
 .leftButton,
 .rightButton {
@@ -318,6 +316,12 @@ ul li {
   padding: 18px;
   z-index: 1;
   cursor: pointer;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .leftButton img,
+  .rightButton img {
+    width: 24px;
+  }
 }
 
 .leftButton {
@@ -339,12 +343,22 @@ ul li {
   height: 415px;
   filter: brightness(80%);
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .img-carrousel {
+    height: 255px;
+  }
+}
 
 .title-logement {
   color: #FF6060;
   font-size: 36px;
   font-family: Montserrat;
   font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .title-logement {
+    font-size: 18px;
+  }
 }
 
 .location-text {
@@ -359,6 +373,13 @@ ul li {
   margin-left: 18%;
   gap: 76px;
 }
+@media (max-width: 1024px) {
+  .topbar-carrousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .topbar-carrousel .topbar-style {
   display: flex;
   flex-direction: row;
@@ -372,6 +393,13 @@ ul li {
   color: #FFFFFF;
   font-size: 18px;
 }
+@media (max-width: 1024px) {
+  .topbar-carrousel .topbar-style {
+    width: 100%;
+    padding-right: 0;
+    height: 30px;
+  }
+}
 
 .number-caroussel {
   position: absolute;
@@ -379,6 +407,11 @@ ul li {
   color: #FFFFFF;
   font-size: 18px;
   left: 724px;
+}
+@media (max-width: 1024px) {
+  .number-caroussel {
+    display: none;
+  }
 }
 
 .tag-logement {
@@ -401,6 +434,12 @@ ul li {
 .content-logement {
   margin-left: 10%;
   margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .content-logement {
+    margin-left: 8%;
+    margin-right: 10%;
+  }
 }
 
 .host {

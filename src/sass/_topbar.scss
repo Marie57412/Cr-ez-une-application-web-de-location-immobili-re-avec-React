@@ -18,12 +18,17 @@
     height: 52px;
     align-items: center;
 
+   
     .text-style {
       color: $whiteColor;
       font-size: 24px;
       margin: 3px;
       margin-left: 13px;
       font-family: $fontBase;
+      @media (max-width: 1024px) {
+        font-size: 13px;
+        
+      }
     }
 
     .arrow-icon {
