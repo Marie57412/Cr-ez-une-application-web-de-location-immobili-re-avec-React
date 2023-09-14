@@ -5,9 +5,8 @@ import logementsData from "./data/logements.json"; // Importez les données des 
 import CarrouselSlide from "./components/Carrousel"; // Importez le composant de carrousel
 import TopbarItem from "./components/TopbarItem"; // Importez le composant de barre supérieure
 import Error from "./Pages/Error";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 // Composant de la page logements
 function Logement() {
@@ -16,8 +15,7 @@ function Logement() {
   const [titles, setTitles] = useState(null);
   const [locations, setLocation] = useState(null);
   const [tags, setTags] = useState([]);
-  const [ host, setHost] = useState(null);
- 
+  const [host, setHost] = useState(null);
 
   useEffect(() => {
     const selectedLogement = logementsData.find(
@@ -28,8 +26,8 @@ function Logement() {
       setTitles(selectedLogement.title);
       setLocation(selectedLogement.location); // Met à jour l'état du logement actuel avec les données chargées
       setTags(selectedLogement.tags);
-      setHost( selectedLogement.host);
-    } 
+      setHost(selectedLogement.host);
+    }
   }, [logementId]);
 
   // Vérifie si currentLogement est null (ID incorrect) et affiche la page d'erreur
@@ -49,7 +47,9 @@ function Logement() {
 
     // Ajouter les étoiles vides avec bordure noire
     for (let i = 0; i < remainingStars; i++) {
-      stars.push(<FontAwesomeIcon key={i + fullStars} icon={faStar} color='#E3E3E3' />);
+      stars.push(
+        <FontAwesomeIcon key={i + fullStars} icon={faStar} color="#E3E3E3" />
+      );
     }
 
     return stars;
@@ -64,38 +64,39 @@ function Logement() {
       {/* Affiche le composant d'étoiles de notation */}
       <div className="content-logement">
         <div className="title_host">
-        <h1 className="title-logement">{titles}</h1>
-        <div className="host-container">
-           <div className="host">
-        {currentLogement && (
-          <>
-            <p>{currentLogement.host.name}</p>
-            <img className="host-img" src={currentLogement.host.picture} alt="Photo de l'hôte" />
-          </>
-        )}
+          <h1 className="title-logement">{titles}</h1>
+          <div className="host-container">
+            <div className="host">
+              {currentLogement && (
+                <>
+                  <p>{currentLogement.host.name}</p>
+                  <img
+                    className="host-img"
+                    src={currentLogement.host.picture}
+                    alt="Photo de l'hôte"
+                  />
+                </>
+              )}
+            </div>
+          </div>
         </div>
-        
-      </div>
-        </div>
+
         <p className="location-text">{locations}</p>
-        
-        <div className="tag-logement">
-          {tags.map((tag, index) => (
-            <p className="tag-text" key={index}>
-              {tag}
-            </p>
-          ))}
-          
+       
+          <div className="tag-logement">
+            {tags.map((tag, index) => (
+              <p className="tag-text" key={index}>
+                {tag}
+              </p>
+            ))}
+          </div>
+          <div className="rating-container">
+            <div className="rating-stars">
+              {renderRatingStars(currentLogement.rating)}
+            </div>
           
         </div>
-        <div className="rating-container">
-        <div className="rating-stars">
-          {renderRatingStars(currentLogement.rating)}
-        </div>
-        
       </div>
-      </div>
-   
 
       <div className="topbar-container topbar-carrousel">
         {/* Affiche les éléments de la barre supérieure en passant les données du logement actuel en tant que props */}
