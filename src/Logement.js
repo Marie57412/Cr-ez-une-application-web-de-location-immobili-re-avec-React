@@ -5,6 +5,9 @@ import logementsData from "./data/logements.json"; // Importez les données des 
 import CarrouselSlide from "./components/Carrousel"; // Importez le composant de carrousel
 import TopbarItem from "./components/TopbarItem"; // Importez le composant de barre supérieure
 import Error from "./Pages/Error";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 // Composant de la page logements
 function Logement() {
@@ -13,7 +16,7 @@ function Logement() {
   const [titles, setTitles] = useState(null);
   const [locations, setLocation] = useState(null);
   const [tags, setTags] = useState([]);
-  const [ host,setHost] = useState(null);
+  const [ host, setHost] = useState(null);
  
 
   useEffect(() => {
@@ -33,6 +36,24 @@ function Logement() {
   if (!currentLogement) {
     return <Error />;
   }
+  const renderRatingStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const remainingStars = 5 - fullStars; // Calcul des étoiles vides
+
+    const stars = [];
+
+    // Remplir les étoiles pleines
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<FontAwesomeIcon key={i} icon={faStar} color="#FF6060" />);
+    }
+
+    // Ajouter les étoiles vides avec bordure noire
+    for (let i = 0; i < remainingStars; i++) {
+      stars.push(<FontAwesomeIcon key={i + fullStars} icon={faStar} color='#E3E3E3' />);
+    }
+
+    return stars;
+  };
 
   return (
     <div>
@@ -67,6 +88,12 @@ function Logement() {
           
           
         </div>
+        <div className="rating-container">
+        <div className="rating-stars">
+          {renderRatingStars(currentLogement.rating)}
+        </div>
+        
+      </div>
       </div>
    
 
