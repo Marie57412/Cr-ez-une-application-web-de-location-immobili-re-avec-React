@@ -79,15 +79,10 @@ a {
   border-radius: 25px;
   filter: brightness(70%);
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
   .banner-home .banner-img {
-    height: 111px;
+    height: 223px;
     border-radius: 10px;
-  }
-}
-@media only screen and (min-device-width: 737px) and (max-device-width: 1024px) {
-  .banner-home .banner-img {
-    height: 150px;
   }
 }
 .banner-home .banner-title {
@@ -283,11 +278,21 @@ ul li {
   font-style: normal;
   font-weight: 700;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .error-page .title-error {
+    font-size: 96px;
+  }
+}
 .error-page .text-error {
   text-align: center;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .error-page .text-error {
+    font-size: 18px;
+  }
 }
 .error-page .text-back {
   color: #FF6060;
@@ -295,6 +300,11 @@ ul li {
   font-size: 18px;
   font-weight: 500;
   text-decoration-line: underline;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+  .error-page .text-back {
+    font-size: 14px;
+  }
 }
 
 .carrousel-container {
