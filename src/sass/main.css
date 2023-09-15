@@ -435,6 +435,12 @@ ul li {
 .tag-logement {
   display: flex;
   margin-bottom: 24px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .tag-logement {
+    margin: -3%;
+  }
 }
 .tag-logement .tag-text {
   margin: 10px;
@@ -443,10 +449,16 @@ ul li {
   color: #FFFFFF;
   font-size: 14px;
   border-radius: 10px;
-  min-width: 12%;
+  min-width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
+}
+@media (max-width: 1024px) {
+  .tag-logement .tag-text {
+    height: 18px;
+  }
 }
 
 .content-logement {
@@ -472,15 +484,28 @@ ul li {
   padding-right: 10px;
   padding-top: 5px;
   height: 52px;
-  width: 100px;
   gap: 10px;
 }
 
 .host-container {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   margin-right: 15%;
-  margin-top: 20px;
+  margin-top: -20%;
+}
+
+.tag-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 44%;
+}
+@media (max-width: 768px) {
+  .tag-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .host-img {

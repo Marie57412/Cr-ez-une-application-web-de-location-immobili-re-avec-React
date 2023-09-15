@@ -65,6 +65,17 @@ function Logement() {
       <div className="content-logement">
         <div className="title_host">
           <h1 className="title-logement">{titles}</h1>
+        </div>
+
+        <p className="location-text">{locations}</p>
+        <div className="tag-container">
+          <div className="tag-logement">
+            {tags.map((tag, index) => (
+              <p className="tag-text" key={index}>
+                {tag}
+              </p>
+            ))}
+          </div>
           <div className="host-container">
             <div className="host">
               {currentLogement && (
@@ -80,21 +91,10 @@ function Logement() {
             </div>
           </div>
         </div>
-
-        <p className="location-text">{locations}</p>
-       
-          <div className="tag-logement">
-            {tags.map((tag, index) => (
-              <p className="tag-text" key={index}>
-                {tag}
-              </p>
-            ))}
+        <div className="rating-container">
+          <div className="rating-stars">
+            {renderRatingStars(currentLogement.rating)}
           </div>
-          <div className="rating-container">
-            <div className="rating-stars">
-              {renderRatingStars(currentLogement.rating)}
-            </div>
-          
         </div>
       </div>
 
