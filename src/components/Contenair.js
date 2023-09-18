@@ -22,9 +22,7 @@ function Contenair() {
             </div>
             <img src={item.cover} alt={item.title} />
           </Link>
-          <button onClick={() => handleLogementSelect(item.id)}>
-            Voir le carrousel
-          </button>
+          
         </div>
       ))}
 

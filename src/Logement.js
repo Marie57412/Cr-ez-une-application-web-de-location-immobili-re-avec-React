@@ -88,14 +88,15 @@ function Logement() {
                   />
                 </>
               )}
-            </div>
-          </div>
-        </div>
-        <div className="rating-container">
+              <div className="rating-container">
           <div className="rating-stars">
             {renderRatingStars(currentLogement.rating)}
           </div>
         </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
       <div className="topbar-container topbar-carrousel">

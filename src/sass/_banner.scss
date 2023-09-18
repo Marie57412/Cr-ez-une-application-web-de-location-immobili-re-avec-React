@@ -3,7 +3,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 43px;
+    margin-bottom: 38px;
+
+     @media only screen and (min-device-width : 320px) and (max-device-width: 1024px){
+        margin-bottom: 19px;
+        
+        }
     
 
     .banner-img{

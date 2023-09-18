@@ -13,7 +13,7 @@
   border: none;
   background: transparent;
   position: absolute;
-  top: 54%;
+  top: 48%;
   transform: translateY(-50%);
   padding: 18px;
   z-index: 1;
@@ -37,7 +37,6 @@
 .img-carrousel {
   width: 100%;
   border-radius: 25px;
-  margin: 45px 0px 0px 0px;
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -67,6 +66,7 @@
 
   @media (max-width: 1024px) {
     font-size: 14px;
+    margin: 5px;
   }
 }
 
@@ -154,7 +154,7 @@
 
 .content-logement {
   margin-left: 10%;
-  margin-top: 30px;
+  margin-top: 15px;
   @media (max-width: 1024px) {
     margin-left: 12%;
     margin-right: 6%;
@@ -196,7 +196,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 15%;
-  margin-top: -16%;
+  margin-top: -55px;
 }
 
 .tag-container {
@@ -228,15 +228,10 @@
 
 .rating-stars {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 13%;
-  margin-bottom: 31px;
-  margin-top: -57px;
+  
 
   @media (min-width: 320px) and (max-width: 767px) {
-    margin-top: -54px;
-    padding-right: 60%;
-    padding-left: 28%;
+   
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
