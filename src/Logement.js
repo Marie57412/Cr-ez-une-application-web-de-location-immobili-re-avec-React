@@ -78,6 +78,7 @@ function Logement() {
           </div>
           <div className="host-container">
             <div className="host">
+              <div className="host-content">
               {currentLogement && (
                 <>
                   <p>{currentLogement.host.name}</p>
@@ -88,6 +89,7 @@ function Logement() {
                   />
                 </>
               )}
+              </div>
               <div className="rating-container">
           <div className="rating-stars">
             {renderRatingStars(currentLogement.rating)}

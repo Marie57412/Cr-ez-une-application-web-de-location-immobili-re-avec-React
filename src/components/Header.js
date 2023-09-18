@@ -24,7 +24,7 @@ function Header() {
             className="navLink" // Classe CSS existante
             exact="true"
           >
-            À propos
+            A propos
           </NavLink>
         </div>
       </div>
