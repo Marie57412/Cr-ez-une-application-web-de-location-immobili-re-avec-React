@@ -44,8 +44,6 @@ function Logement() {
     return <Error />;
   }
   
-  
-  
   const renderRatingStars = (rating) => {
     const fullStars = Math.floor(rating);
     const remainingStars = 5 - fullStars; // Calcul des étoiles vides
