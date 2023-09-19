@@ -33,17 +33,17 @@ function Logement() {
       setIsValidId(false); // Marque l'ID comme invalide si le logement n'est pas trouvé
     }
   }, [logementId]);
-  
+
   if (!currentLogement && isValidId) {
     // Si les données du logement ne sont pas encore chargées et l'ID est valide, affiche un indicateur de chargement ou autre contenu si nécessaire
-    return <Accueil/>;
+    return <Accueil />;
   }
 
   if (!isValidId) {
     // Si l'ID n'est pas valide, affiche la page d'erreur
     return <Error />;
   }
-  
+
   const renderRatingStars = (rating) => {
     const fullStars = Math.floor(rating);
     const remainingStars = 5 - fullStars; // Calcul des étoiles vides
@@ -89,26 +89,25 @@ function Logement() {
           <div className="host-container">
             <div className="host">
               <div className="host-content">
-              {currentLogement && (
-                <>
-                  <p>{currentLogement.host.name}</p>
-                  <img
-                    className="host-img"
-                    src={currentLogement.host.picture}
-                    alt="Photo de l'hôte"
-                  />
-                </>
-              )}
+                {currentLogement && (
+                  <>
+                    <p>{currentLogement.host.name}</p>
+                    <img
+                      className="host-img"
+                      src={currentLogement.host.picture}
+                      alt="Photo de l'hôte"
+                    />
+                  </>
+                )}
               </div>
               <div className="rating-container">
-          <div className="rating-stars">
-            {renderRatingStars(currentLogement.rating)}
-          </div>
-        </div>
+                <div className="rating-stars">
+                  {renderRatingStars(currentLogement.rating)}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
       </div>
 
       <div className="topbar-container topbar-carrousel">
@@ -117,7 +116,6 @@ function Logement() {
         <TopbarItem text={currentLogement?.equipments} title="Equipements" />
       </div>
     </div>
-    
   );
 }
 
