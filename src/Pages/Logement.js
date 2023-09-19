@@ -17,6 +17,7 @@ function Logement() {
   const [locations, setLocation] = useState(null);
   const [tags, setTags] = useState([]);
   const [host, setHost] = useState(null);
+  const [isValidId, setIsValidId] = useState(true);
 
   useEffect(() => {
     const selectedLogement = logementsData.find(
@@ -28,16 +29,22 @@ function Logement() {
       setLocation(selectedLogement.location); // Met à jour l'état du logement actuel avec les données chargées
       setTags(selectedLogement.tags);
       setHost(selectedLogement.host);
+    } else {
+      setIsValidId(false); // Marque l'ID comme invalide si le logement n'est pas trouvé
     }
   }, [logementId]);
   
-  if (!currentLogement){
-    return <Accueil />;
+  if (!currentLogement && isValidId) {
+    // Si les données du logement ne sont pas encore chargées et l'ID est valide, affiche un indicateur de chargement ou autre contenu si nécessaire
+    return <Accueil/>;
   }
 
-  if (!currentLogement){
+  if (!isValidId) {
+    // Si l'ID n'est pas valide, affiche la page d'erreur
     return <Error />;
   }
+  
+  
   
   const renderRatingStars = (rating) => {
     const fullStars = Math.floor(rating);
