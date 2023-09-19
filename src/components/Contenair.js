@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import CarrouselSlide from "./Carrousel";
 
 function Contenair() {
-  const [selectedLogementId, setSelectedLogementId] = useState(null);
+  let [selectedLogementId, setSelectedLogementId] = useState(null);  // Création d'un état pour stocker l'ID du logement sélectionné
 
-  const handleLogementSelect = (logementId) => {
+  let handleLogementSelect = (logementId) => {
     setSelectedLogementId(logementId);
   };
 

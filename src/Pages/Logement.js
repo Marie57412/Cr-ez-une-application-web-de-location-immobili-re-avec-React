@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"; // Importez useParams pour extraire l'ID de l'URL
-import logementsData from "./data/logements.json"; // Importez les données des logements (assurez-vous que le chemin soit correct)
-import CarrouselSlide from "./components/Carrousel"; // Importez le composant de carrousel
-import TopbarItem from "./components/TopbarItem"; // Importez le composant de barre supérieure
-import Error from "./Pages/Error";
+import logementsData from "../data/logements.json"; // Importez les données des logements (assurez-vous que le chemin soit correct)
+import CarrouselSlide from "../components/Carrousel"; // Importez le composant de carrousel
+import TopbarItem from "../components/TopbarItem"; // Importez le composant de barre supérieure
+import Error from "../Pages/Error";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
