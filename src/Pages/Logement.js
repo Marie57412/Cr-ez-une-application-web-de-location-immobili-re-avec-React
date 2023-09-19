@@ -5,6 +5,7 @@ import logementsData from "../data/logements.json"; // Importez les données des
 import CarrouselSlide from "../components/Carrousel"; // Importez le composant de carrousel
 import TopbarItem from "../components/TopbarItem"; // Importez le composant de barre supérieure
 import Error from "../Pages/Error";
+import Accueil from "../Pages/Accueil";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,11 +30,15 @@ function Logement() {
       setHost(selectedLogement.host);
     }
   }, [logementId]);
+  
+  if (!currentLogement){
+    return <Accueil />;
+  }
 
-  // Vérifie si currentLogement est null (ID incorrect) et affiche la page d'erreur
-  if (!currentLogement) {
+  if (!currentLogement){
     return <Error />;
   }
+  
   const renderRatingStars = (rating) => {
     const fullStars = Math.floor(rating);
     const remainingStars = 5 - fullStars; // Calcul des étoiles vides
@@ -107,6 +112,7 @@ function Logement() {
         <TopbarItem text={currentLogement?.equipments} title="Equipements" />
       </div>
     </div>
+    
   );
 }
 
